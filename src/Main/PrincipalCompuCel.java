@@ -36,7 +36,7 @@ public class PrincipalCompuCel {
 		// Menu Principal
 
 		do {
-			System.out.println("\n===== MENU COMPUCEL V2 =====");
+			System.out.println("\n===== MENU COMPUCEL V3 =====");
 
 			System.out.println("1.-Agregar equipo");
 			System.out.println("2.-Mostrar registros");
@@ -298,7 +298,7 @@ public class PrincipalCompuCel {
 					menu = 9;
 					break;
 				case 10:
-					System.out.println("Version 2.0");
+					System.out.println("Version 3.0");
 					break;
 				default:
 					break;
