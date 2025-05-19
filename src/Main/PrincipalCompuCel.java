@@ -36,7 +36,7 @@ public class PrincipalCompuCel {
 		// Menu Principal
 
 		do {
-			System.out.println("\n===== MENU COMPUCEL =====");
+			System.out.println("\n===== MENU COMPUCEL V2 =====");
 
 			System.out.println("1.-Agregar equipo");
 			System.out.println("2.-Mostrar registros");
@@ -47,6 +47,7 @@ public class PrincipalCompuCel {
 			System.out.println("7.-Eliminar registro");
 			System.out.println("8.-Agregar datos de prueba");
 			System.out.println("9.-Salir");
+			System.out.println("10.-Conocer la version del programa");
 			System.out.println("Ingrese una opcion: ");
 			menu = Integer.parseInt(sc.nextLine());
 			try {
@@ -65,7 +66,7 @@ public class PrincipalCompuCel {
 						System.out.println("Sistema Operatido del equipo: ");
 						System.out.println("1.-Windows 10");
 						System.out.println("2.-Windows 11");
-						System.out.println("3.-Distribución linux");
+						System.out.println("3.-Distribuciï¿½n linux");
 						System.out.println("4.-MacOS");
 						selecSO = Integer.parseInt(sc.nextLine());
 						if (selecSO > 0 && selecSO <= 4) {
@@ -77,7 +78,7 @@ public class PrincipalCompuCel {
 								so = "Windows 11";
 								break;
 							case 3:
-								so = "Distribución linux";
+								so = "Distribuciï¿½n linux";
 								break;
 							case 4:
 								so = "MacOS";
@@ -231,7 +232,7 @@ public class PrincipalCompuCel {
 							System.out.println("Ingrese el nuevo sistema operativo: ");
 							System.out.println("1.-Windows 10");
 							System.out.println("2.-Windows 11");
-							System.out.println("3.-Distribución linux");
+							System.out.println("3.-Distribuciï¿½n linux");
 							System.out.println("4.-MacOS");
 							selecSO = Integer.parseInt(sc.nextLine());
 							if (selecSO > 0 && selecSO <= 4) {
@@ -243,7 +244,7 @@ public class PrincipalCompuCel {
 									compuTemp.setSo("Windows 11");
 									break;
 								case 3:
-									compuTemp.setSo("Distribución linux");
+									compuTemp.setSo("Distribuciï¿½n linux");
 									break;
 								case 4:
 									compuTemp.setSo("MacOS");
@@ -287,7 +288,7 @@ public class PrincipalCompuCel {
 					imp.guardarRegistro(new Computadora("Laptop", "HP", "HP123", "Windows 10", 14500.00f, 10));
 					imp.guardarRegistro(new Computadora("Escritorio", "Dell", "DL456", "Windows 11", 18999.99f, 7));
 					imp.guardarRegistro(
-							new Computadora("Laptop", "Lenovo", "LN789", "Distribución linux", 13500.75f, 5));
+							new Computadora("Laptop", "Lenovo", "LN789", "Distribuciï¿½n linux", 13500.75f, 5));
 					imp.guardarRegistro(new Computadora("All-in-One", "Apple", "AP321", "MacOS", 25999.99f, 3));
 					imp.guardarRegistro(new Computadora("Mini PC", "ASUS", "AS654", "Windows 10", 9999.50f, 12));
 					System.out.println("Datos de prueba agregados exitosamente");
@@ -295,18 +296,22 @@ public class PrincipalCompuCel {
 				case 9:
 					System.out.println("Saliendo del programa");
 					menu = 9;
+					break;
+				case 10:
+					System.out.println("Version 2.0");
+					break;
 				default:
 					break;
 				}
 
 			} catch (InputMismatchException e) {
-				System.out.println("Entrada inválida. Por favor ingresa datos válidos.");
+				System.out.println("Entrada invï¿½lida. Por favor ingresa datos vï¿½lidos.");
 				sc.nextLine(); // Limpiar buffer
 			} catch (Exception e) {
-				System.out.println("Ocurrió un error inesperado: " + e.getMessage());
+				System.out.println("Ocurriï¿½ un error inesperado: " + e.getMessage());
 			}
 
-		} while (menu < 9);
+		} while (menu != 9);
 
 		sc.close();
 	}
